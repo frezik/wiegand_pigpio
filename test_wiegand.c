@@ -22,7 +22,7 @@ sudo ./wiegand_c
 
 void callback(int bits, uint32_t value)
 {
-   printf("bits=%d value=%u\n", bits, value);
+   printf("%u\n", value);
 }
 
 int main(int argc, char *argv[])
@@ -31,9 +31,10 @@ int main(int argc, char *argv[])
 
    if (gpioInitialise() < 0) return 1;
 
-   w = Pi_Wieg(14, 15, callback, 5);
-
-   sleep(300);
+   while( 1 ) {
+       w = Pi_Wieg(14, 15, callback, 5);
+       sleep(300);
+   }
 
    Pi_Wieg_cancel(w);
 

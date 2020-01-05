@@ -1,4 +1,4 @@
-Function to decode a Wiegand code.
+Function to decode a Wiegand code. Needs "pigpio" installed.
 
 To build:
 
