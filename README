@@ -1,0 +1,9 @@
+Function to decode a Wiegand code.
+
+To build:
+
+    $ make
+
+To clean:
+
+    $ make clean
