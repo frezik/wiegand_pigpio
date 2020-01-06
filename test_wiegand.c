@@ -22,20 +22,20 @@ sudo ./wiegand_c
 
 void callback(int bits, uint32_t value)
 {
-   printf("%u\n", value);
+    printf("%u\n", value);
 }
 
 int main(int argc, char *argv[])
 {
-   Pi_Wieg_t * w;
+    Pi_Wieg_t * w;
 
-   if (gpioInitialise() < 0) return 1;
+    if (gpioInitialise() < 0) return 1;
 
-   w = Pi_Wieg(17, 18, callback, 5);
-   sleep(300);
+    w = Pi_Wieg(17, 18, callback, 5);
+    sleep(300);
 
-   Pi_Wieg_cancel(w);
+    Pi_Wieg_cancel(w);
 
-   gpioTerminate();
+    gpioTerminate();
 }
 
