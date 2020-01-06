@@ -31,10 +31,8 @@ int main(int argc, char *argv[])
 
    if (gpioInitialise() < 0) return 1;
 
-   while( 1 ) {
-       w = Pi_Wieg(14, 15, callback, 5);
-       sleep(300);
-   }
+   w = Pi_Wieg(17, 18, callback, 5);
+   sleep(300);
 
    Pi_Wieg_cancel(w);
 
