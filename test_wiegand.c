@@ -23,7 +23,7 @@ sudo ./wiegand_c
 
 void callback(int bits, uint32_t value)
 {
-    uint32_t corrected_value = value >> 1;
+    uint32_t corrected_value = (0x1FFFFFF & value) >> 1;
     printf("%u\n", corrected_value);
     fflush(stdout);
 }
