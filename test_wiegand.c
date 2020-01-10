@@ -23,7 +23,9 @@ sudo ./wiegand_c
 
 void callback(int bits, uint32_t value)
 {
-    printf("%u\n", value);
+    uint32_t corrected_value = value >> 1;
+    printf("%u\n", corrected_value);
+    fflush(stdout);
 }
 
 int main(int argc, char *argv[])
